@@ -26,7 +26,7 @@ namespace WebSite
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
 
-            bundles.Add(new ScriptBundle("~/bundles/axity").Include("~Scripts/Custom/Login.js"));
+            bundles.Add(new ScriptBundle("~/bundles/axity").Include("~/Scripts/Custom/Login.js"));
         }
     }
 }

@@ -1,0 +1,32 @@
+﻿@model  WebSite.Models.ProductsViewModel
+
+@{
+    ViewBag.Title = "GetProducts";
+    int iterator = 0;
+}
+
+<h2>GetProducts</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre </th>
+            <th scope="col">Costo</th>
+        </tr>
+    </thead>
+    <tbody id="MateriasTable">
+
+        @foreach (var Products in Model.products)
+        {
+            <tr>
+                <th scope="row"> @iterator</th>
+                <th scope="row">@Products.Nombre</th>
+                <th scope="row">@Products.Costo</th>
+            </tr>
+            iterator++;
+        }
+
+    </tbody>
+</table>
+

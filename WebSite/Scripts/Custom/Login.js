@@ -6,7 +6,7 @@ $("#LoginBtn").click(function () {
     
     $.ajax({
         type: "GET",
-        url: "http://localhost:59180/Axity/api/GetUser?name=" + name + "&password=" + password ,
+        url: "https://localhost:44351/Axity/api/GetUser?name=" + name + "&password=" + password ,
 
         beforeSend: function (request) {
             request.setRequestHeader("Content-Type", "application/json");
@@ -24,7 +24,7 @@ $("#LoginBtn").click(function () {
                 //toast.setText('Error: ' + msg).Show();
             }
             else {
-                window.location.href = "https://localhost:44353/Axity/GetProducts";
+                window.location.href = "https://localhost:44308/Test/GetProducts";
             }
         }
 
