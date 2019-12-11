@@ -49,7 +49,13 @@ namespace WebAPI.Controllers
         {
             try
             {
-                var result = unitOfWork.ProductsRepository.Get();
+                var result = unitOfWork.ProductsRepository.Get()?.Select(item  => new ProductsDto()
+                {
+                    Nombre = item.Nombre,
+                    Costo = item.Costo,
+                    IdProduct = item.IdProduct,
+                    IdTypeProduct = item.IdTypeProduct
+                });
                 if (result == null)
                     return Ok(new ProductsDto { Message = "No hay coincidencias", HasError = true });
 
